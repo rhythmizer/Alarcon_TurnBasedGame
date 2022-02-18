@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/TxtHeroName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="132dp"
+        android:text="Hero Name"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TxtHeroHP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Character HP"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/TxtHeroName"
+        app:layout_constraintTop_toBottomOf="@+id/TxtHeroName" />
+
+    <TextView
+        android:id="@+id/TxtHeroMP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Character MP"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/TxtHeroHP"
+        app:layout_constraintTop_toBottomOf="@+id/TxtHeroHP" />
+
+    <TextView
+        android:id="@+id/TxtHeroDPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Hero Damage"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/TxtHeroName"
+        app:layout_constraintTop_toBottomOf="@+id/TxtHeroName" />
+
+    <TextView
+        android:id="@+id/TxtMonsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="72dp"
+        android:text="Monster Name"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TxtHeroName" />
+
+    <TextView
+        android:id="@+id/TxtMonsHP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monster HP"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/TxtMonsName"
+        app:layout_constraintTop_toTopOf="@+id/TxtHeroHP" />
+
+    <TextView
+        android:id="@+id/TxtMonsMP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monster MP"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/TxtMonsHP"
+        app:layout_constraintTop_toTopOf="@+id/TxtHeroMP" />
+
+    <TextView
+        android:id="@+id/TxtMonsDPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Monster Damage"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/TxtMonsName"
+        app:layout_constraintTop_toBottomOf="@+id/TxtMonsName" />
+
+    <TextView
+        android:id="@+id/TxtCombatLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Combat Log"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnNextTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="First Turn"
+        app:layout_constraintEnd_toStartOf="@+id/TxtMonsName"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toEndOf="@+id/TxtHeroName"
+        app:layout_constraintTop_toTopOf="@+id/TxtHeroName" />
+
+    <ImageButton
+        android:id="@+id/btnskill1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:text="skill1"
+        app:layout_constraintEnd_toStartOf="@+id/btnskill2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/TxtHeroMP"
+        app:layout_constraintTop_toBottomOf="@+id/btnNextTurn"
+        app:srcCompat="@drawable/skillicon1" />
+
+    <ImageButton
+        android:id="@+id/btnskill2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:scaleType="fitXY"
+        android:text="skill2"
+        app:layout_constraintEnd_toStartOf="@+id/btnskill3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnskill1"
+        app:layout_constraintTop_toTopOf="@+id/btnskill1"
+        app:srcCompat="@drawable/skillicon2" />
+
+    <ImageButton
+        android:id="@+id/btnskill3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:scaleType="fitXY"
+        android:text="skill3"
+        app:layout_constraintEnd_toStartOf="@+id/btnskill4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnskill2"
+        app:layout_constraintTop_toTopOf="@+id/btnskill1"
+        app:srcCompat="@drawable/skillicon3" />
+
+    <ImageButton
+        android:id="@+id/btnskill4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:scaleType="fitXY"
+        android:text="skill4"
+        app:layout_constraintEnd_toStartOf="@+id/TxtMonsMP"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnskill3"
+        app:layout_constraintTop_toTopOf="@+id/btnskill1"
+        app:srcCompat="@drawable/skillicon4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
